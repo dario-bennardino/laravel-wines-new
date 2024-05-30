@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\PageController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\WinesController;
+use App\Http\Controllers\Admin\WinesController;
 
 /*
 |--------------------------------------------------------------------------

@@ -14,6 +14,8 @@
                     <th scope="col">rating_reviews</th>
                     <th scope="col">location</th>
                     <th scope="col">image</th>
+                    <th scope="col">aromi</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +29,7 @@
                         <td>{{ $wine->rating_reviews }}</td>
                         <td>{{ $wine->location }}</td>
                         <td><img style="max-width: 120px" src="{{ $wine->image }}" alt="{{ $wine->wine }}"></td>
+                        <td>aromi</td>
                     </tr>
                 @endforeach
             </tbody>

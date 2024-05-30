@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\WineRequest;
 use App\Models\Wine;
 
@@ -13,6 +14,7 @@ class WinesController extends Controller
      */
     public function index()
     {
+
     }
 
     /**
@@ -20,7 +22,8 @@ class WinesController extends Controller
      */
     public function create()
     {
-        return view('admin.nuova-pagina');
+        $wines = Wine::all();
+        return view('admin.nuova-pagina', compact('wines'));
     }
 
     /**
