@@ -9,9 +9,8 @@ class Wine extends Model
 {
     use HasFactory;
 
-    // protected $fillable = [
-    //     'wine',
-
-
-    // ];
+    public function aromas()
+    {
+        return $this->belongsToMany(Aroma::class);
+    }
 }
