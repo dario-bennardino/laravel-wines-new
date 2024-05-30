@@ -1,5 +1,5 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>Home della dashboard</h1>
+    <h1>Homepage</h1>
 @endsection
