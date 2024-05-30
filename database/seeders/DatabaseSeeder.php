@@ -12,8 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-       $this->call([
-        AromasTableSeeder::class,
-       ]);
+        $this->call([
+            // AromasTableSeeder::class,
+            AromaWineTableSeeder::class
+        ]);
     }
 }

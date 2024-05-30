@@ -8,13 +8,14 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">winery</th>
-                    <th scope="col">wine</th>
-                    <th scope="col">rating_average</th>
-                    <th scope="col">rating_reviews</th>
-                    <th scope="col">location</th>
-                    <th scope="col">image</th>
-                    <th scope="col">aromi</th>
+                    <th scope="col">Winery</th>
+                    <th scope="col">Wine</th>
+                    <th scope="col">Aromi</th>
+                    <th scope="col">Rating average</th>
+                    <th scope="col">Rating reviews</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Image</th>
+
 
                 </tr>
             </thead>
@@ -25,11 +26,19 @@
                         <td>{{ $wine->id }}</td>
                         <td>{{ $wine->winery }}</td>
                         <td>{{ $wine->wine }}</td>
+                        <td>
+                            @forelse ($wine->aromas as $aroma)
+                                <span class="badge text-bg-success">{{ $aroma->name }}</span>
+                            @empty
+                                -
+                            @endforelse
+
+                        </td>
                         <td>{{ $wine->rating_average }}</td>
                         <td>{{ $wine->rating_reviews }}</td>
                         <td>{{ $wine->location }}</td>
                         <td><img style="max-width: 120px" src="{{ $wine->image }}" alt="{{ $wine->wine }}"></td>
-                        <td>aromi</td>
+
                     </tr>
                 @endforeach
             </tbody>
