@@ -8,8 +8,8 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Winery</th>
                     <th scope="col">Wine</th>
+                    <th scope="col">Winery</th>
                     <th scope="col">Aromi</th>
                     <th scope="col">Rating average</th>
                     <th scope="col">Rating reviews</th>
@@ -24,8 +24,8 @@
                     <tr>
 
                         <td>{{ $wine->id }}</td>
-                        <td>{{ $wine->winery }}</td>
                         <td>{{ $wine->wine }}</td>
+                        <td>{{ $wine->winery }}</td>
                         <td>
                             @forelse ($wine->aromas as $aroma)
                                 <span class="badge text-bg-success">{{ $aroma->name }}</span>
